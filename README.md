@@ -19,6 +19,7 @@ TECHNOLOGIES USED
 <h2>
 LICENSE
 =============================
+<br>
 MIT License
 
 Copyright (c) [2021] [Jailanie Kaganovsky]
