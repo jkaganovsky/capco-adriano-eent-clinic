@@ -1,0 +1,36 @@
+{
+  "name": "capco-adriano-eent-clinic",
+  "version": "1.0.0",
+  "description": "EENT Clinic headed by Dr. Jennifer Capco-Adriano (Opthalmologist) and Dr. Joel Adriano (ENT, Otolaryngologist) based in Sta. Elena, Marikina City, Metro Manila, Philippines.",
+  "main": "server.js",
+  "proxy": "http://localhost:3001",
+  "scripts": {
+    "start": "if-env NODE_ENV=production && npm run start:prod || npm run start:dev",
+    "start:prod": "node server.js",
+    "start:dev": "concurrently \"nodemon --ignore 'client/*'\" \"npm run client\"",
+    "client": "cd client && npm run start",
+    "seed": "node scripts/seedDB.js",
+    "install": "cd client && npm install",
+    "build": "cd client && npm run build",
+    "heroku-postbuild": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jkaganovsky/capco-adriano-eent-clinic.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jkaganovsky/capco-adriano-eent-clinic/issues"
+  },
+  "homepage": "https://github.com/jkaganovsky/capco-adriano-eent-clinic#readme",
+  "devDependencies": {
+    "concurrently": "^6.2.0",
+    "nodemon": "^2.0.9"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "if-env": "^1.0.4"
+  }
+}
